@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Memory Game</title>
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet">
+		<link rel="stylesheet" href="../css/reset.css">
+		<link rel="stylesheet" href="../css/jquery-ui.structure.min.css">
+		<link rel="stylesheet" href="../css/jquery-ui.theme.min.css">
+		<link rel="stylesheet" href="../css/style.css">
+	</head>
+	<body>
+    <header>
+      <h1>Memory Game</h1>
+    </header>
+    <main>
+      <div id="game-rules">
+      <ul>
+        <h2>Règles du jeu : </h2>
+        <h3>Condition de victoire : Retrouver toutes les paires de carte en moins d'une minute !</h3>
+        <li>- Retourner une première carte.</li>
+        <li>- Retourner une seconde carte, si cette carte est identique à la première alors la paire reste affiché.</li>
+        <li>- Si la première carte n'est pas identique à la seconde, mémoriser les cartes avant qu'elles ne se retournent.</li>
+        <li>- La couleur de la Timebarre indique le temps restant en passant doucement de vert à rouge.</li>
+      </ul>
+      <p>Vous savez ce qu'il faut faire, il ne vous reste plus qu'à lancer une partie, Enjoy !</p>
+        <a href="game.html"><button id="easy-game" value="easy">Easy</button></a>
+        <a href="game.html"><button id="hard-game" value="hard">Hardcore</button></a>
+      </div>
+      <div id="score-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Partie N°</th>
+              <th>Résultat</th>
+              <th>Cartes Retournées</th>
+              <th>Paires Trouvées</th>
+              <th>Meilleur Temps</th>
+            </tr>
+          </thead>
+          <tbody id="score-board">
+          </tbody>
+        </table>
+        <button id="clear-score"><a href="accueil.html">Reset le tableau des scores</a></button>
+      </div>
+    </main>
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/jquery-ui.min.js"></script>
+		<script src="../js/appresult.js"></script>
+	</body>
+</html>

@@ -1,0 +1,219 @@
+/* HTML START */
+
+body {
+  font-family: 'Inconsolata', monospace;
+}
+
+header {
+  background-color: #ededed;
+  border-bottom: 1px solid #ccc;
+}
+
+header h1 {
+  font-size: 2.5em;
+  font-weight: 700;
+  padding: 0.5em 0;
+  text-align: center;
+}
+
+main div.board {
+  margin: 2em auto;
+  width: 800px;
+  height: 470px;
+  background-color: #dddaff;
+  border: 15px solid #dddaff;
+}
+
+main div.board.hard-mode {
+  margin: 2em auto;
+  width: 1020px;
+  height: 470px;
+  background-color: #dddaff;
+  border: 15px solid #dddaff;
+}
+
+main div#game-rules {
+  text-align: center;
+  width: 650px;
+  margin: 1em auto;
+}
+
+main div#game-rules p {
+  text-align: left;
+  padding-top: 0.2em;
+}
+
+main div#game-rules ul {
+  text-align: left;
+}
+
+main div#game-rules ul li {
+  padding: 0.2em 0;
+}
+
+main div#game-rules ul h3 {
+  font-weight: bold;
+  padding: 0.3em 0;
+}
+
+main div#score-table {
+  text-align: center;
+  width: 650px;
+  margin: 1em auto;
+  border: 1px solid #76d4d6;
+}
+
+main h2 {
+  text-align: center;
+  font-size: 1.8em;
+  margin: 0.5em;
+}
+
+main p {
+  text-align: center;
+}
+
+main div table {
+  text-align: center;
+  width: 600px;
+  margin: 1em auto;
+}
+
+main div table tr,
+main div table tr th,
+main div table tbody td {
+  border: 1px solid #76d4d6;
+}
+
+main div table tr th {
+  background-color: #dddaff;
+}
+
+main button {
+  margin: 1em 0;
+  background-color: #dddaff;
+  padding: 0.3em;
+  border: none;
+  border-radius: 0.2em;
+}
+
+main button:hover {
+  background-color: #76d4d6;
+  transition: 0.5s;
+}
+
+main button#easy-game {
+  background-color: #76d4d6;
+  font-weight: bold;
+  padding: 1em;
+  border-radius: 0.2em;
+}
+
+main button#easy-game:hover {
+  background-color: #36a136;
+  transition: 0.5s;
+}
+
+main button#hard-game {
+  background-color: #76d4d6;
+  font-weight: bold;
+  padding: 1em;
+  border-radius: 0.2em;
+}
+
+main button#hard-game:hover {
+  background-color: #e76060;
+  transition: 0.5s;
+}
+
+/* HTML END */
+
+/* CUSTOM JQUERY UI PROGRESS BAR START */
+
+.ui-progressbar {
+  margin: 0 auto;
+  width: 800px;
+  position: relative;
+}
+
+.hard-mode {
+  margin: 0 auto;
+  width: 1020px;
+  position: relative;
+}
+
+.ui-progressbar .ui-progressbar-value {
+  margin: 0;
+}
+
+.ui-progressbar .ui-widget-header {
+  background-color: LightGreen;
+}
+
+.progress-label {
+  position: absolute;
+  top: 0.5em;
+  width: 800px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1em;
+}
+
+.progress-label.hard-mode {
+  width: 1020px;
+}
+
+/* CUSTOM JQUERY UI PROGRESS BAR END */
+
+/* CREATE IN JS START */
+
+main div.the-card {
+  position: relative;
+  margin: 5px;
+  width: 100px;
+  height: 100px;
+  float: left;
+  z-index: 10;
+  -webkit-perspective: 1000;
+  perspective: 1000;
+  cursor: pointer;
+}
+
+main div.card {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: all 0.5s linear;
+  transform-style: preserve-3d;
+  transition: all 0.5s linear;
+}
+
+main div.the-card.active div.card {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  box-shadow: -5px 5px 5px #aaa;
+}
+
+main div.hide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: #a9a9a9;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+main div.image.face {
+  display: block;
+  width: 100px;
+  height: 100px;
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  box-sizing: border-box;
+  color: #fff;
+  text-align: center;
+  background: url('../images/cards.png');
+}
+
+/* CREATE IN JS END */
